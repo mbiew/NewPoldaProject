@@ -56,7 +56,7 @@ public class buatPenerimaLp extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(null, "Data Gagal dimasukan!");
             }
-            
+
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan pada Database!");
@@ -65,65 +65,62 @@ public class buatPenerimaLp extends javax.swing.JFrame {
      
      //************************************* UPDATE LAPORAN **************************************************************/
     public void updateTblDataLaporan(int tmpIdLaporan, int tmpIdPenerima) {
-        int idDataLaporan = tmpIdLaporan; 
+        int idDataLaporan = tmpIdLaporan;
         int idPenerimaLP = tmpIdPenerima;
 
         try {
             Statement stmt = konek.createStatement();
-            String query = "UPDATE tbl_data_laporan SET id_penerima_lp = idPenerimaLP.toString() WHERE id_data_laporan = + idDataLaporan.toString()";
-            int berhasil = stmt.executeUpdate(query);
+            String query = "UPDATE tbl_data_laporan "
+                    + " SET id_penerima_lp = " + idPenerimaLP
+                    + " WHERE id_data_laporan = " + idDataLaporan;
+            int Berhasilsil = stmt.executeUpdate(query);
 
-            if (berhasil == 1) {
+            if (Berhasilsil == 1) {
                 System.out.println("Data Laporan Updated");
             } else {
                 System.out.println("Failed to update Data Laporan");
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan pada Database!");
-        } 
+        }
     }
     
     public int getIdOfLatestLaporan() {
-//        Statement stmt = konek.createStatement();
-//        String query = "SELECT MAX(id_data_laporan) FROM tbl_data_laporan";
-//        ResultSet result = stmt.executeQuery(query);
-//        result.first();
+        
         try {
             Statement stmt = konek.createStatement();
-            String query = "SELECT MAX(id_data_laporan) FROM tbl_data_laporan";
+            String query = "SELECT MAX(id_data_laporan) AS ID FROM tbl_data_laporan";
             ResultSet result = stmt.executeQuery(query);
             result.first();
-            return result.getInt(0); 
-           
-            
+            return result.getInt("ID");
         } catch (Exception e) {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan pada Database!");
-        } 
+        }
         return 0;
-         
+
     }
         
     public int getIdOfLatestPenerima() {
-        
+
+     
         try {
-            
             Statement stmt = konek.createStatement();
-        String query = "SELECT MAX(id_penerimaLp) FROM tbl_penerima_lp";
-        ResultSet result = stmt.executeQuery(query);
-        result.first();
-        
-        return result.getInt(0);
-            
+            String query = "SELECT MAX(id_penerimaLp) AS ID  FROM tbl_penerima_lp";
+            ResultSet result = stmt.executeQuery(query);
+            result.first();
+
+            return result.getInt("ID");
+
         } catch (Exception e) {
-            
-             e.printStackTrace();
+ 
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Terjadi Kesalahan pada Database!");
-            
+
         }
         return 0;
-        
+
     }
     //************************************* UPDATE LAPORAN **************************************************************/
     

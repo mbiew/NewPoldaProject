@@ -48,6 +48,9 @@
       <SubComponents>
         <Component class="javax.swing.JRadioButton" name="jrb1">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value=" A"/>
           </Properties>
           <Events>
@@ -61,6 +64,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrb2">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value=" B"/>
           </Properties>
           <Constraints>
@@ -71,6 +77,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrb3">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Dilaporkan"/>
           </Properties>
           <Constraints>
@@ -81,6 +90,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="jrb4">
           <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup2"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tangkap Tangan"/>
           </Properties>
           <Constraints>

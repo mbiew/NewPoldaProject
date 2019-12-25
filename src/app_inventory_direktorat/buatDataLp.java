@@ -141,6 +141,7 @@ public class buatDataLp extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroup1.add(jrb1);
         jrb1.setText(" A");
         jrb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,12 +150,15 @@ public class buatDataLp extends javax.swing.JFrame {
         });
         jPanel1.add(jrb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
 
+        buttonGroup1.add(jrb2);
         jrb2.setText(" B");
         jPanel1.add(jrb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, -1, -1));
 
+        buttonGroup2.add(jrb3);
         jrb3.setText("Dilaporkan");
         jPanel1.add(jrb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, -1, -1));
 
+        buttonGroup2.add(jrb4);
         jrb4.setText("Tangkap Tangan");
         jPanel1.add(jrb4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, -1, -1));
 
